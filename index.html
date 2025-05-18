@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestor de piezas</title>
+
+  <!-- Importación de la biblioteca oficial de Supabase -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+
+  <!-- Tu código JavaScript principal -->
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <form id="formularioPieza">
+    <input type="text" name="nombre" placeholder="Nombre" required>
+    <input type="text" name="descripcion" placeholder="Descripción">
+    <p>Fecha de caducidad de las piezas</p>
+    <input type="date" name="fecha">
+    <p>Hora de venta</p>
+    <input type="time" name="hora">
+    <br>
+    <input type="number" name="valoración" placeholder="Valoración">
+  
+    <label>
+      Stock
+      <input type="checkbox" name="stock">
+    </label>
+
+    <!-- Nuevo campo para la categoría -->
+    <label for="categoria">Categoría:</label>
+    <select name="categoria" id="categoria">
+      <option value="">-- Seleccione una categoría --</option>
+      <!-- Las opciones se cargarán dinámicamente con JavaScript -->
+    </select>
+  
+    <button type="submit"id="botonGuardar">Guardar pieza</button>
+    <button type="button" id="botonCancelar" style="display: none;">Cancelar edición</button>
+  </form>
+  
+  <h1>Listado de piezas</h1>
+  <div id="listadoPiezas"></div>
+</body>
+</html>
