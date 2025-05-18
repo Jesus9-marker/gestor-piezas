@@ -200,4 +200,56 @@ async function cargarPiezas(supabase) {
       selectCategoria.appendChild(option);
     });
   }
+  document.addEventListener("DOMContentLoaded", () => {
+  // Aplicar estilos generales al body
+  document.body.style.fontFamily = "Arial, sans-serif";
+  document.body.style.background = "#f4f4f8";
+  document.body.style.margin = "20px";
+  document.body.style.color = "#333";
+
+  // Estilizar el formulario
+  const form = document.getElementById("formularioPieza");
+  form.style.background = "#fff";
+  form.style.padding = "20px";
+  form.style.borderRadius = "10px";
+  form.style.boxShadow = "0 4px 8px rgba(0, 0, 0, 0.1)";
+  form.style.maxWidth = "500px";
+  form.style.marginBottom = "30px";
+
+  // Estilo para todos los inputs y selects
+  const inputs = form.querySelectorAll("input, select");
+  inputs.forEach(input => {
+    input.style.display = "block";
+    input.style.width = "100%";
+    input.style.marginBottom = "15px";
+    input.style.padding = "10px";
+    input.style.border = "1px solid #ccc";
+    input.style.borderRadius = "5px";
+    input.style.boxSizing = "border-box";
+  });
+
+  // Estilo para botones
+  const botones = form.querySelectorAll("button");
+  botones.forEach(boton => {
+    boton.style.padding = "10px 20px";
+    boton.style.border = "none";
+    boton.style.borderRadius = "5px";
+    boton.style.cursor = "pointer";
+    boton.style.marginRight = "10px";
+    boton.style.color = "#fff";
+  });
+
+  const botonGuardar = document.getElementById("botonGuardar");
+  botonGuardar.style.background = "#28a745";
+
+  const botonCancelar = document.getElementById("botonCancelar");
+  botonCancelar.style.background = "#dc3545";
+
+  // Estilo para el listado
+  const listado = document.getElementById("listadoPiezas");
+  listado.style.background = "#fff";
+  listado.style.padding = "15px";
+  listado.style.borderRadius = "10px";
+  listado.style.boxShadow = "0 2px 4px rgba(0, 0, 0, 0.1)";
+});
   
