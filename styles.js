@@ -252,4 +252,4 @@ async function cargarPiezas(supabase) {
   listado.style.borderRadius = "10px";
   listado.style.boxShadow = "0 2px 4px rgba(0, 0, 0, 0.1)";
 });
-  
+
